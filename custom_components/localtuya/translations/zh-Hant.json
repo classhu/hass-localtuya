@@ -1,0 +1,253 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "設備已配置",
+            "device_updated": "設備配置已更新",
+            "invalid_id": "無效的設備ID",
+            "missing_key": "缺少密鑰",
+            "not_supported": "設備不受支援"
+        },
+        "error": {
+            "authentication_failed": "認證失敗。\n{msg}",
+            "cannot_connect": "無法連接到設備。請確認IP地址正確後重試。",
+            "device_list_failed": "獲取設備列表失敗。\n{msg}",
+            "invalid_auth": "設備認證失敗。請確認設備ID和本地密鑰正確。",
+            "invalid_id": "無效的設備ID",
+            "unknown": "發生未知錯誤。\n{ex}",
+            "entity_already_configured": "該實體已配置",
+            "address_in_use": "TCP端口6668（用於發現）已被佔用。請檢查是否有其他整合正在使用它。",
+            "discovery_failed": "發現設備時出現錯誤。請查看日誌了解詳情。如果問題持續存在，請創建新問題（包括調試日誌）。",
+            "empty_dps": "成功連接到設備但未找到數據點。請重新設置。如果問題持續存在，請創建新問題（包括調試日誌）。"
+        },
+        "step": {
+            "user": {
+                "data": {
+                    "region": "數據中心區域",
+                    "client_id": "客戶端ID",
+                    "client_secret": "客戶端密鑰",
+                    "user_id": "用戶ID",
+                    "username": "用戶名",
+                    "no_cloud": "禁用雲API？"
+                },
+                "description": "配置用於連接塗鴉雲API的憑據。",
+                "title": "雲API賬戶配置"
+            }
+        }
+    },
+    "options": {
+        "abort": {
+            "already_configured": "該賬戶已配置",
+            "device_success": "設備 {dev_name} 已成功 {action}。",
+            "no_entities": "無法刪除設備的所有實體。\n如果要刪除設備：瀏覽到`設備和服務`菜單，在`設備`標籤頁中搜索您的設備，點擊`設備信息`框中的3個點，然後按`刪除`按鈕。"
+        },
+        "error": {
+            "authentication_failed": "認證失敗。\n{msg}",
+            "cannot_connect": "無法連接到設備。請確認IP地址正確後重試。",
+            "device_list_failed": "獲取設備列表失敗。\n{msg}",
+            "invalid_auth": "設備認證失敗。請確認設備ID和本地密鑰正確。",
+            "unknown": "發生未知錯誤。\n{ex}",
+            "entity_already_configured": "該實體已配置",
+            "address_in_use": "TCP端口6668（用於發現）已被佔用。請檢查是否有其他整合正在使用它。",
+            "discovery_failed": "發現設備時出現錯誤。請查看日誌了解詳情。如果問題持續存在，請創建新問題（包括調試日誌）。",
+            "empty_dps": "成功連接到設備但未找到數據點。請重新設置。如果問題持續存在，請創建新問題（包括調試日誌）。"
+        },
+        "step": {
+            "yaml_import": {
+                "title": "不支援",
+                "description": "使用`YAML`配置的設備無法在UI中配置。從`YAML`中刪除您的設備並在UI中重新創建，或修改您的`YAML`配置。"
+            },
+            "init": {
+                "title": "配置",
+                "description": "選擇一個選項繼續。",
+                "menu_options": {
+                    "add_device": "添加新設備",
+                    "edit_device": "重新配置現有設備",
+                    "configure_cloud": "管理雲API賬戶"
+                }
+            },
+            "add_device": {
+                "title": "選擇要配置的設備",
+                "description": "在塗鴉應用中設置後，兼容的塗鴉設備會在本地網絡上自動發現。如果看不到預期的設備，請從下拉菜單中選擇`手動添加設備`。",
+                "data": {
+                    "selected_device": "發現的設備",
+                    "mass_configure": "自動配置所有識別的設備"
+                }
+            },
+            "edit_device": {
+                "title": "重新配置現有設備",
+                "description": "選擇要重新配置的設備。",
+                "data": {
+                    "selected_device": "已配置的設備"
+                }
+            },
+            "configure_cloud": {
+                "title": "管理雲API賬戶",
+                "description": "配置用於連接塗鴉雲API的憑據。",
+                "data": {
+                    "region": "數據中心區域",
+                    "client_id": "客戶端ID",
+                    "client_secret": "客戶端密鑰",
+                    "user_id": "用戶ID",
+                    "username": "用戶名",
+                    "no_cloud": "禁用雲API？"
+                }
+            },
+            "confirm": {
+                "title": "確認",
+                "description": "{message}"
+            },
+            "configure_device": {
+                "title": "配置設備連接",
+                "description": "配置任何空的設備詳情{for_device}（如果有），以允許LocalTuya連接到設備。",
+                "data": {
+                    "friendly_name": "設備名稱",
+                    "host": "IP地址",
+                    "device_id": "設備ID",
+                    "local_key": "本地密鑰",
+                    "node_id": "（可選）子設備節點ID",
+                    "protocol_version": "協議版本",
+                    "enable_debug": "啟用調試（必須在`configuration.yaml`中也手動啟用）",
+                    "scan_interval": "（可選）掃描間隔（秒），如果不自動掃描",
+                    "entities": "已配置的實體（取消選中以刪除）",
+                    "add_entities": "添加新實體",
+                    "manual_dps_strings": "（可選）手動DPS，如果未自動檢測到（用逗號分隔）",
+                    "reset_dpids": "（可選）在RESET命令中發送的DPID，如果設備在開啟後不響應狀態請求（用逗號分隔）",
+                    "device_sleep_time": "（可選）設備睡眠時間（秒）：如果設備報告其狀態，然後進入睡眠",
+                    "export_config": "將實體配置保存為模板"
+                }
+            },
+            "device_setup_method": {
+                "title": "配置設備實體",
+                "description": "LocalTuya將嘗試自動發現其餘配置。但是，如果這對您的設備不起作用或者您想調整設置，請選擇`手動`選項。",
+                "menu_options": {
+                    "auto_configure_device": "自動發現設備實體",
+                    "pick_entity_type": "手動配置設備實體",
+                    "choose_template": "使用保存的模板"
+                }
+            },
+            "configure_entity": {
+                "title": "配置實體",
+                "description": "請填寫{entity}的詳細信息，類型為{platform}。所有設置（除了`類型`和`ID`）都可以稍後在`配置`頁面更改。",
+                "data": {
+                    "id": "DP ID",
+                    "friendly_name": "實體友好名稱",
+                    "current": "電流",
+                    "current_consumption": "當前消耗",
+                    "voltage": "電壓",
+                    "commands_set": "開_關_停命令集",
+                    "positioning_mode": "定位模式",
+                    "current_position_dp": "當前位置（僅用於*位置*模式）",
+                    "set_position_dp": "設置位置（僅用於*位置*模式）",
+                    "stop_switch_dp": "（可選）停止開關（如果蓋子有繼續命令？）",
+                    "position_inverted": "反轉0-100位置（僅用於*位置*模式）",
+                    "span_time": "完全打開時間（秒）（僅用於*定時*模式）",
+                    "unit_of_measurement": "（可選）測量單位",
+                    "device_class": "（可選）設備類別",
+                    "state_class": "（可選）狀態類別",
+                    "scaling": "（可選）縮放因子",
+                    "state_on": "開啟值",
+                    "state_off": "關閉值",
+                    "powergo_dp": "電源DP（通常為25或2）",
+                    "idle_status_value": "空閒狀態（用逗號分隔）",
+                    "returning_status_value": "返回狀態（用逗號分隔）",
+                    "docked_status_value": "對接狀態（用逗號分隔）",
+                    "fault_dp": "故障DP（通常為11）",
+                    "battery_dp": "電池狀態DP（通常為14）",
+                    "mode_dp": "模式DP",
+                    "modes": "模式列表",
+                    "return_mode": "返回主頁模式",
+                    "fan_speed_dp": "（可選）風扇速度DP",
+                    "fan_speeds": "風扇速度列表（用逗號分隔）",
+                    "clean_time_dp": "清潔時間DP（通常為33）",
+                    "clean_area_dp": "清潔區域DP（通常為32）",
+                    "clean_record_dp": "清潔記錄DP（通常為34）",
+                    "locate_dp": "定位DP（通常為31）",
+                    "pause_dp": "暫停DP",
+                    "paused_state": "暫停狀態（pause, paused等）",
+                    "stop_status": "停止狀態",
+                    "brightness": "亮度（僅用於白色）",
+                    "brightness_lower": "亮度下限值",
+                    "brightness_upper": "亮度上限值",
+                    "color_temp": "色溫",
+                    "color_temp_reverse": "反轉色溫？",
+                    "color": "顏色",
+                    "color_mode": "顏色模式（即工作模式）",
+                    "color_temp_min_kelvin": "最小色溫（K）",
+                    "color_temp_max_kelvin": "最大色溫（K）",
+                    "music_mode": "音樂模式可用？",
+                    "scene": "場景",
+                    "scene_values": "（可選）場景值",
+                    "select_options": "選擇選項值",
+                    "fan_speed_control": "風扇速度控制DP",
+                    "fan_oscillating_control": "風扇擺動控制DP",
+                    "fan_speed_min": "最小風扇速度（整數）",
+                    "fan_speed_max": "最大風扇速度（整數）",
+                    "fan_speed_ordered_list": "風扇速度列表（覆蓋速度最小/最大值），用逗號分隔",
+                    "fan_direction": "風扇方向DP",
+                    "fan_direction_forward": "前進DP字符串",
+                    "fan_direction_reverse": "後退DP字符串",
+                    "fan_dps_type": "DP值類型",
+                    "current_temperature_dp": "當前溫度",
+                    "target_temperature_dp": "目標溫度",
+                    "temperature_step": "（可選）溫度步進",
+                    "min_temperature": "最小溫度",
+                    "max_temperature": "最大溫度",
+                    "precision": "精度（可選，用於DP值）",
+                    "target_precision": "目標精度（可選，用於DP值）",
+                    "temperature_unit": "（可選）溫度單位",
+                    "hvac_mode_dp": "（可選）HVAC模式DP",
+                    "hvac_mode_set": "（可選）HVAC模式",
+                    "hvac_add_off": "（可選）在HVAC模式中包含`關閉`",
+                    "hvac_action_dp": "（可選）HVAC當前動作DP",
+                    "hvac_action_set": "（可選）HVAC動作",
+                    "preset_dp": "（可選）預設DP",
+                    "preset_set": "（可選）預設",
+                    "fan_speed_list": "（可選）支持的風扇速度，用逗號分隔",
+                    "eco_dp": "（可選）節能DP",
+                    "eco_value": "（可選）節能值",
+                    "heuristic_action": "（可選）啟用啟發式動作",
+                    "dps_default_value": "（可選）未初始化時的默認值",
+                    "restore_on_reconnect": "在連接丟失後恢復Home Assistant中設置的最後一個值？",
+                    "min_value": "最小值",
+                    "max_value": "最大值",
+                    "step_size": "數字之間的最小增量",
+                    "is_passive_entity": "被動實體？（需要整合發送初始化值）",
+                    "entity_category": "在此類別中顯示實體",
+                    "humidifier_available_modes": "（可選）設備中的可用模式",
+                    "humidifier_current_humidity_dp": "（可選）當前濕度DP",
+                    "humidifier_mode_dp": "（可選）設置模式DP",
+                    "humidifier_set_humidity_dp": "（可選）設置濕度DP",
+                    "min_humidity": "設置最小支持濕度",
+                    "max_humidity": "設置最大支持濕度",
+                    "alarm_supported_states": "設備支持的狀態",
+                    "receive_dp": "接收信號DP（默認為202）",
+                    "key_study_dp": "（可選）按鍵學習DP（通常為7）",
+                    "lock_state_dp": "（可選）鎖定狀態DP",
+                    "jammed_dp": "（可選）卡住DP",
+                    "target_temperature_high_dp": "（可選）目標高溫DP",
+                    "target_temperature_low_dp": "（可選）目標低溫DP",
+                    "color_mode_set": "支持的模式集（如果不確定，請保持默認）",
+                    "reset_timer": "（可選）將狀態重置為關閉的間隔計時器",
+                    "swing_mode_dp": "（可選）垂直擺動DP",
+                    "swing_modes": "（可選）可用的垂直擺動選項",
+                    "swing_horizontal_dp": "（可選）水平擺動DP",
+                    "swing_horizontal_modes": "（可選）可用的水平擺動選項"
+                },
+                "data_description": {
+                    "hvac_mode_set": "每行代表 [ hvac_mode: device_value ] [支持的HVAC模式](https://developers.home-assistant.io/docs/core/entity/climate/#hvac-modes)",
+                    "hvac_action_set": "每行代表 [ hvac_action: device_value ] [支持的HVAC動作](https://developers.home-assistant.io/docs/core/entity/climate/#hvac-action)",
+                    "preset_set": "每行代表 [ device_value: friendly name ]",
+                    "scene_values": "每行代表 [ device_value: friendly name ]",
+                    "select_options": "每行代表 [ device_value: friendly name ]",
+                    "swing_modes": "每行代表 [ device_value: friendly name ]",
+                    "swing_horizontal_modes": "每行代表 [ device_value: friendly name ]",
+                    "alarm_supported_states": "每行代表 [ supported state: device_value ] [支持的狀態](https://developers.home-assistant.io/docs/core/entity/alarm-control-panel/#states)",
+                    "humidifier_available_modes": "每行代表 [ device_value: friendly name ]",
+                    "device_class": "了解更多關於[設備類別](https://www.home-assistant.io/integrations/homeassistant/#device-class)",
+                    "state_class": "了解更多關於[狀態類別](https://developers.home-assistant.io/docs/core/entity/sensor/#available-state-classes)"
+                }
+            }
+        }
+    },
+    "title": "塗鴉本地整合"
+} 
